@@ -1,0 +1,23 @@
+Escape Sequence  Description
+\t                Inserts a tab in the text at this point
+\b                Inserts a backspace in the text at this point
+\n                Inserts a newline in the text at this point
+\r                Inserts a carriage return in the text at this point
+\f                Inserts a form feed in the text at this point
+\'                Inserts a single quote character in the text at this point
+\"                Inserts a double quote character in the text at this point
+\\                Inserts a backslash character in the text at this point
+
+Ex
+If you want to put quotes within qutoes you must use the escape sequence, \", on the interior quotes:
+public class Test{
+           public static void mainString args[]){
+           System.out.println("She said \"Hello\" to me.");
+           }
+}
+
+
+ASCII Art: Use ASCII Art generator to help with text ascii art for programming
+is a graphic design techniance that uses computers for representation and consists of pics pieced together from the 95 printable characters defined by the ASCII standard from 1963 and ASCII compliant character sets with proprietary extren characters
+
+Replace necessary area with escape sequences to avoid errors during ASCII Art

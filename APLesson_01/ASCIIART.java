@@ -2,11 +2,11 @@ public class ASCIIART
 {
 public static void main(String[]args)
 {
-	System.out.println("  ______          __  _                ");
-	System.out.println(" /_  __/  __  _____/ /_(_)___  ____ _    ");
-	System.out.println("   / /   / _ \\/ ___/ __/ / __ \\/ __ `/    ");
-	System.out.println("  / /   /  __ (__  ) /_/ / / / / /_/ / _ _ ");
-	System.out.println("/_/   \\___/____/\\__/_/_/ /_/\\__, (_|_|_)");
-	System.out.println("                          /____/       ");
+	System.out.println("___________              __  .__                           ");
+	System.out.println("\\__    ___/___   _______/  |_|__| ____    ____             ");
+	System.out.println("  |    |_/ __ \\ /  ___/\\   __\\  |/    \\  / ___\\            ");
+	System.out.println("  |    |\\  ___/ \\___ \\  |  | |  |   |  \\/ /_/  >           ");
+	System.out.println("  |____| \\___  >____  > |__| |__|___|  /\\___  / /\\  /\\  /\\ ");
+	System.out.println("             \\/     \\/               \\//_____/  \\/  \\/  \\/ ");
 }
 }

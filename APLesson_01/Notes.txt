@@ -21,3 +21,4 @@ ASCII Art: Use ASCII Art generator to help with text ascii art for programming
 is a graphic design techniance that uses computers for representation and consists of pics pieced together from the 95 printable characters defined by the ASCII standard from 1963 and ASCII compliant character sets with proprietary extren characters
 
 Replace necessary area with escape sequences to avoid errors during ASCII Art
+Such as replace "\" with "\\"

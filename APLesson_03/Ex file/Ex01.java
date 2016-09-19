@@ -28,6 +28,15 @@ public class Ex01
 		String job = user_input.nextLine();
 		user_input.nextLine();
 		System.out.println("That is a bit cliche");
+		
+		System.out.println("So I have gathered your information...");
+		System.out.println("Your name is    " + name);
+		System.out.println("Your age is   " + age);
+		System.out.println("Your idea of \"fun\" is " + hobby);
+		System.out.println("Your favorite type of music is " + music);
+		System.out.println("Number of siblings is " + siblings);
+		System.out.println("Your idea of what you will be in the future is being a/an   " + job);
+		System.out.println("Thank you for your information... I can use this to TAKE OVER THE WORLD...!?");
 
 
 

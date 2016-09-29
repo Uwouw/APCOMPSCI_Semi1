@@ -4,7 +4,7 @@ public class Ex_03
 	public static void main(String[]args)
 	{
 		Scanner user_input = new Scanner(System.in);
-		System.out.println("Hello! I am back. Mr.Calculateate the total monthly payment amount on a loan guy");
+		System.out.println("Hello! I am back. Mr.Calculate the total monthly payment amount on a loan guy!");
 		System.out.println("\nPlease give me the following numbers....");
 		
 		System.out.println("\nPlease give me the principal (the original amount you intend to borrow)");

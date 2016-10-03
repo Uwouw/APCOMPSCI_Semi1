@@ -24,6 +24,6 @@ public class Rectangle
 	}
 	public static void print()
 	{
-		System.out.println("I have gathered the data and the perimeter of the square is " + perimeter + " inches");
+		System.out.printf("I have gathered the data and the perimeter of the square is %1.5f inches", perimeter);
 	}
 }

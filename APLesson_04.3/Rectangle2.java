@@ -7,10 +7,10 @@ public class Rectangle2
 		Scanner user_input = new Scanner(System.in);
 		System.out.println("Hello I am Mr.The Perimeter of a Square Calculator!\n");
 		System.out.println("Please input the length in inches:");
-		l = user_input.nextDouble();
+		double l = user_input.nextDouble();
 
 		System.out.println("Please input the width in inches:");
-		w = user_input.nextDouble();
+		double w = user_input.nextDouble();
 		print(calcPerim(l, w));
 	}
 	public static double calcPerim(double l, double w)

@@ -15,17 +15,17 @@ public class Average2
 		System.out.println("Please input the third number:");
 		double num3 = user_input.nextDouble();
 		
-		print("Ok. I have gathered the information and the average of " + num1 + ", " + num2 + ", and  " + num3, average(num1, num2, num3);
+		print(average(num1, num2, num3), num1, num2, num3);
 		
 	}
 	
 	public static double average(double num1, double num2, double num3)
 	{
-		return (num1 * num2 * num3) / 3; 
+		return (num1 + num2 + num3) / 3; 
 	}
-	public static void print(String text, double average)
+	public static void print(double average, double num1, double num2, double num3)
 	{
-		System.out.printf(text + "is %1.5f ", average);
+		System.out.printf("Ok. I have gathered the information and the average of " + num1 + ", " + num2 + ", and " + num3 + " is %1.5f ", average);
 		
 	}
 }

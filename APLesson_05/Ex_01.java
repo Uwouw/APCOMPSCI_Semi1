@@ -1,40 +1,39 @@
 import java.util.Scanner;
+import java.util.Random;
 public class Ex_01
 {
-	
-	
 	public static void main(String[]args)
 	{
-		 String Random wild = new Random();
+		Random wild = new Random();
+		int player = wild.nextInt(6) + 1;
+		System.out.println("Your number is " + player);
+		int computer = wild.nextInt(6) + 1;
+		System.out.println("The computer's number is " + computer);
 		
-		int player = wild.nextInt(1-7);
-		int computer = wild.nextInt(1-7);
+		boolean winner;
 		
-		System.out.println("You rolled a " + player);
-		System.out.println("The computer rolled a " + computer);
-		
-		boolean truth = true;
-		if(truth)
+		winner = rollDice(player, computer);
+		if(winner == true)
 		{
-			System.out.println("Congratz you beat the computer you should feel proud because it will be your last")
+			System.out.println("Heyyy you won. I knew you could do it. not really");
 		}
-		if(!truth)
+		if(winner == false)
 		{
-			System.out.println("Zaneendesune.Pasokonnohougaplayeryoritsuyoidesu.")
+			System.out.println("Wow you suck");
 		}
-		rollDice(); 
 	}
-	public static rollDice(int player, int computer )
+	
+	public static boolean rollDice(int player, int computer)
 	{
 		if(player > computer)
 		{
-			return true
+			return true;
 		}
-		
 		if(computer > player)
 		{
-			return false
+			return false;
 		}
+		
+		return false;
 	}
-	
 }

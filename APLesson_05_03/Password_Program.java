@@ -1,11 +1,20 @@
 import java.util.Scanner;
 public class Password_Program
 {
-	static String username1 = "umm";
-	static String password1 = "test";
+	static String username1 = "whatislife";
+	static String password1 = "sleep";
 	
 	public static void main(String[]args)
 	{
+		
+		
+		passCheck();
+	}
+	
+	
+	
+	public static void passCheck()
+	{	
 		Scanner user_input = new Scanner(System.in);
 		
 		System.out.println("Input the username");
@@ -13,39 +22,32 @@ public class Password_Program
 		
 		System.out.println("Input the password");
 		String password = user_input.nextLine();
-		
-		passCheck(username, password);
-	}
-	
-	
-	
-	public static void passCheck(String username, String password);
-	{
 		if(username1.equals(username) && password1.equals(password))
 		{
 			System.out.println("Access granted.... opening file\n");
-			System.out.println("Obtained 0 money");	
-			return
+			System.out.println("You obtained 0 money");	
+			
 		}
 		else
 		{
 			if(username1.equals(username) && !password1.equals(password))
 			{
-				System.out.println("Your password is incorrect try again.");
-				
+				System.out.println("Your password is incorrect try again.\n");
+				passCheck();
+		
 			}
 			
-			if(password1.equals(password) && !username1.equals(username))
+			else if(password1.equals(password) && !username1.equals(username))
 			{
-				System.out.println("Your username is incorrect try again.");
-				
+				System.out.println("Your username is incorrect try again.\n");
+				passCheck();
 			}
 			
 			else
 			{
 				System.out.println("Both of them are wrong try again.\n");
-				System.out.println("");
-				
+				System.out.println(":D\n");
+				passCheck();
 			}
 		}
 	}

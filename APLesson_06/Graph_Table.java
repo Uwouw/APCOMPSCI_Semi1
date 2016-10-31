@@ -11,6 +11,8 @@ public class Graph_Table
 		System.out.println("Enter the size of the table");
 		int size = user_input.nextInt();
 		
+		System.out.println("x | y");
+		System.out.println("_____");
 		for(int i = 1; i <= size; i++)
 		{
 			System.out.println(i + " | " + i*number);

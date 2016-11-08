@@ -4,6 +4,7 @@ public class Left_Triangle
 	public static void main(String[]args)
 	{
 		Scanner user_input = new Scanner(System.in);
+		System.out.println("Hello I am Mr.Output Word from Bottom to Top guy??");
 		System.out.println("Enter a word");
 		String word = user_input.next();
 		

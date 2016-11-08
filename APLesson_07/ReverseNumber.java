@@ -1,22 +1,22 @@
 import java.util.Scanner;
 public class ReverseNumber
 {
-	
+	static int rev, number, num = 0;
 	public static void main(String[]args)
 	{
 		Scanner user_input = new Scanner(System.in);
-		
+		System.out.println("Hello I am Mr.Reverse the order of the number guy");
 		System.out.println("Input number");
-		int number = user_input.nextInt();
-		int num = number;
+		number = user_input.nextInt();
+		num = number;
 		
-		int rev = 0;
 		
-		getReverse(num, rev);
+		
+		getReverse();
 		
 		System.out.println(number + " reverse is " + rev);
 	}
-	public static void getReverse(int num, int rev)
+	public static void getReverse()
 		{
 			while(num > 0)
 			{

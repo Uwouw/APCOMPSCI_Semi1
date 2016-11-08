@@ -5,7 +5,7 @@ public class DigitAdder
 	public static void main(String[]args)
 	{
 		Scanner user_input = new Scanner(System.in);
-		
+		System.out.println("Hello I am Mr.DigitAdder guy");
 		System.out.println("Input number");
 		num = user_input.nextInt();
 		int number = num;

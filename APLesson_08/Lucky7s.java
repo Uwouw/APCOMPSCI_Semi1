@@ -13,15 +13,15 @@ public class Lucky7s
 	}
 	public static int luck(int number)
 	{
-		if(number >= 0)
+		if(number > 0)
 		{
-			if(number == 7)
+			if(number%10 == 7)
 			{
-				return luck(1 + number % 10);
+				return 1 + (luck(number/10));
 			}
 			else
 			{
-				return luck(number % 10);
+				return (luck(number/10));
 			}
 		}
 		else

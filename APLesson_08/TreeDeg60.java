@@ -11,7 +11,7 @@ public class TreeDeg60
 		
 		tree(word,0,stop);
 	}
-	public static void tree( String word, int start, int stop) 
+	public static void tree(String word, int start, int stop) 
 	{
 		if(start <= stop)
 		{

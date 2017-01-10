@@ -1,47 +1,57 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 public class ExpressionSolver
 {
 	public static void main(String[]args)
 	{
 		Scanner user_input = new Scanner(System.in);
-		integer[] equation = user_input.nextInt();
+		System.out.println("Enter  a number, an expression , and another number:");
+		String equations = user_input.nextLine();
+		ArrayList<String> equation = new ArrayList<String>(Arrays.asList(equations.split(" ")));
 		System.out.print(doEquation(equation));
 	}
 	
-	public static void doEquation(ArrayList<Integer> equation)
+	public static ArrayList<String> doEquation(ArrayList<String> equation)
 	{
-		ArrayList<integer> equation = new ArrayList<Integer>(Array.List(equation));
-		while(i > equation)
+		int i = 0;
+		while(i < equation.size())
 		{
-			if(ArrayList.get(*) || ArrayList.get(/))
+			if(equation.get(i).equals("*") || equation.get(i).equals("/"))
 			{
-				if(ArrayList.get(*))
+				if(equation.get(i).equals("*"))
 				{
-					ArrayList.set(i, i--);
-					ArrayList.set(*, i++);
+					equation.set(i, " " + ((Integer.parseInt(equation.get(i - 1))) * (Integer.parseInt(equation.get(i + 1)))));
+
 				}
 				
 				else
 				{
-					ArrayList.set(/, i++);
-					ArrayList.remove(i--);
-					ArrayList.remove(i);
+					equation.set(i, " " + ((Integer.parseInt(equation.get(i - 1))) / (Integer.parseInt(equation.get(i + 1)))));
+
 				}
 				
+				equation.remove(i-1);
+				equation.remove(i);
 			}
 			i++;
 			
 		}
-		while(i > )
+		i = 0;
+		while(i < equation.size())
 		{
-			if(i < 0 || i > 0)
+			if(equation.get(i).equals("+") || equation.get(i).equals("-"))
 			{
-				if(i > 0)
+				if(equation.get(i).equals("+"))
 				{
-					
+					equation.set(i, " " + ((Integer.parseInt(equation.get(i - 1))) + (Integer.parseInt(equation.get(i + 1)))));
 				}
+				
+				else
+				{
+					equation.set(i, " " + ((Integer.parseInt(equation.get(i - 1))) - (Integer.parseInt(equation.get(i + 1)))));
+				}
+				
+				equation.remove(i-1);
+				equation.remove(i);
 			}
 			i++;
 		}

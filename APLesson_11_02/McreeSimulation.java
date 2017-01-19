@@ -1,23 +1,31 @@
 import java.util.*;
 public class McreeSimulation
 {
+	static int bulletCount;
+	static int shotCount;
+	static String[] clip;
+	static int CLIPSIZE = 16;
+	
+	
 	public static void main(String[]args)
 	{
-		int bulletCount = 96;
-		int shotCount = 0;
-		String[] clip = new String[16];
+		bulletCount = 96;
+		shotCount = 0;
+		clip = new String[CLIPSIZE];
 		resetClip();
-		
+		System.out.println("It's high noon somewhere in the world");
 		while(bulletCount > 0 || shotCount > 0)
 		{
-			System.out.println("Action: R /"reload/" or S /"shoot/"");
-			if(action == "R")
+			Scanner user_input = new Scanner(System.in);
+			System.out.println("Action: R \"reload\" or S \"shoot\"");
+			String action = user_input.next();
+			if(action.equals("R"))
 			{
 				reload();
 			}
-			if(action == "S")
+			if(action.equals("S"))
 			{
-				shoot(shotCount);
+				shoot();
 			}
 			printClip();
 		}
@@ -25,16 +33,19 @@ public class McreeSimulation
 	}
 	public static void resetClip()
 	{
-		for(i = 0; i < clip.length; i++)
+		for(int i = 0; i < clip.length; i++)
 		{
 			clip[i] = "[]";
 		}
 	}
-	public static void shoot(int shotCount)
+	public static void shoot()
 	{
 		if(shotCount > 0)
 		{
-			
+			clip[shotCount - 1] = "[]";
+			shotCount -= 1;
+			System.out.println("It's HIGH NOON pew\n");
+			return;
 		}
 		else
 		{
@@ -44,25 +55,32 @@ public class McreeSimulation
 	}
 	public static void reload()
 	{
-		if(int bulletCount >= clip.length)
+		if(bulletCount >= clip.length)
 		{
-			clip.length 
+			 bulletCount -= CLIPSIZE; 
+			 shotCount = CLIPSIZE;
 		}
 		else
 		{
-			int shotCount = (bulletCount);
+			int shotCount = bulletCount;
 			int bulletCount = 0;
 			
 		
 		}
 		resetClip();
-		for(i = 0; i < shotCount; i++)
+		for(int i = 0; i < shotCount; i++)
 		{
 			clip[i] = " * ";
 		}
 	}
 	public static void printClip()
 	{
-		
+		String output = " ";
+		System.out.println("Bullets:\t" + bulletCount + "\nClip:\t");
+		for(int i = 0; i < clip.length; i++)
+		{
+			output += clip[i];
+		}
+		System.out.println(output);
 	}
 }

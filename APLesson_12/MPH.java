@@ -1,7 +1,8 @@
 import java.util.*;
 public class MPH
 {
-	private int distance, hours, minutes;
+	static int distance, hours, minutes;
+	static long mph;
 	public MPH()
 	{
 		distance = 0;
@@ -9,24 +10,23 @@ public class MPH
 		minutes = 0;
 		mph = 0;
 	}
-	public MPH(int distance, int hours, int minutes)
+	public MPH(int d, int hrs, int min)
 	{
 		distance = d;
 		hours = hrs;
 		minutes = min;
 		mph = 0;
 	}
-	public void setValues(int distance, int hours, int minutes)
+	public void setValues(int d, int hrs, int min)
 	{
 		distance = d;
 		hours = hrs;
 		minutes = min;
 		mph = 0;
 	}
-	public void getMPH()
+	public long getMPH()
 	{
-		mph = Math.round(distance / (hours + minutes / 60));
-		return mph;
+		return Math.round(distance / (hours + minutes / 60));
 	}
 	
 }

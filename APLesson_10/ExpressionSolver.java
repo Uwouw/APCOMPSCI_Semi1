@@ -28,12 +28,10 @@ public class ExpressionSolver
 					equation.set(i, "" + ((Integer.parseInt(equation.get(i - 1))) / (Integer.parseInt(equation.get(i + 1)))));
 
 				}
-				
 				equation.remove(i-1);
 				equation.remove(i);
 			}
 			i++;
-			
 		}
 		i = 0;
 		while(i < equation.size())
